@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Test</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fadeIn 1s ease;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    header .logo {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    header button {
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .wrapper {
+      padding: 20px;
+    }
+
+    .welcome {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .welcome .content {
+      max-width: 500px;
+    }
+
+    .welcome .content h1 {
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .welcome .content p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .welcome .content .cta {
+      padding: 15px 30px;
+      background-color: #28A745;
+      color: white;
+      font-size: 16px;
+    }
+
+    .welcome .image-block {
+      flex: 1;
+      height: 300px;
+      background-color: #f0a500;
+      border-radius: 10px;
+    }
+
+    @media(max-width: 768px) {
+      .welcome {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .welcome .content h1 {
+        font-size: 32px;
+      }
+
+      .welcome .image-block {
+        flex: auto;
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+      }
+    }
+
+    @media(max-width: 425px) {
+      .welcome .content h1 {
+        font-size: 24px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="wrapper">
+    <div class="logo">Logo</div>
+    <button>Войти</button>
+  </header>
+
+  <main class="wrapper">
+    <section class="welcome">
+      <div class="content">
+        <h1>Добро пожаловать<br>на наш сайт</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, cumque.</p>
+        <button class="cta">Начать</button>
+      </div>
+      <div class="image-block"></div>
+    </section>
+
+    <!-- и тд -->
+  </main>
+
+
+</body>
+
+</html>
